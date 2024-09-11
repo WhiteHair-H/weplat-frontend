@@ -9,8 +9,8 @@ RUN echo "LoadModule proxy_module modules/mod_proxy.so" >> /usr/local/apache2/co
 RUN echo "<VirtualHost *:80>\n\
   ServerName weplat-ap2-web-alb-589660504.ap-northeast-1.elb.amazonaws.com\n\
   ProxyPreserveHost On\n\
-  ProxyPass / http://weplat-ap2-was-nlb-33056150147479ca.elb.ap-northeast-1.amazonaws.com:8080/\n\
-  ProxyPassReverse / http://weplat-ap2-was-nlb-33056150147479ca.elb.ap-northeast-1.amazonaws.com:8080/\n\
+  ProxyPass / http://weplat-ap2-was-nlb-333210f6720068e3.elb.ap-northeast-1.amazonaws.com:8080/\n\
+  ProxyPassReverse / http://weplat-ap2-was-nlb-333210f6720068e3.elb.ap-northeast-1.amazonaws.com:8080/\n\
 </VirtualHost>" >> /usr/local/apache2/conf/httpd.conf
 
 # 포트 80을 외부로 열어줌
