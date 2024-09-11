@@ -35,7 +35,7 @@ jobs:
       - name: Build, tag, and push image to Amazon ECR
         id: build-image
         env:
-          ECR_REGISTRY: 213899591783.dkr.ecr.ap-northeast-1.amazonaws.com/weplat-petclinic-front #639122009176.dkr.ecr.ap-northeast-2.amazonaws.com
+          ECR_REGISTRY: 213899591783.dkr.ecr.ap-northeast-1.amazonaws.com #639122009176.dkr.ecr.ap-northeast-2.amazonaws.com
           ECR_REPOSITORY: weplat-petclinic-front #weplat-frontend
           IMAGE_TAG: latest #web
         run: |
