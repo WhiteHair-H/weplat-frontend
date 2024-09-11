@@ -7,7 +7,7 @@ RUN echo "LoadModule proxy_module modules/mod_proxy.so" >> /usr/local/apache2/co
 
 # VirtualHost 설정 추가
 RUN echo "<VirtualHost *:80>\n\
-  ServerName weplat-ap2-web-alb-65289793.ap-northeast-1.elb.amazonaws.com\n\
+  ServerName weplat-ap2-web-alb-589660504.ap-northeast-1.elb.amazonaws.com\n\
   ProxyPreserveHost On\n\
   ProxyPass / http://weplat-ap2-was-nlb-33056150147479ca.elb.ap-northeast-1.amazonaws.com:8080/\n\
   ProxyPassReverse / http://weplat-ap2-was-nlb-33056150147479ca.elb.ap-northeast-1.amazonaws.com:8080/\n\
