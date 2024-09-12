@@ -58,3 +58,15 @@ jobs:
           service: weplat-ap2-ecs-front-service #weplat-ap2-ecs-front-service
           cluster: weplat-ap2-ecs-cluster #weplat-ap2-ecs-cluster
           wait-for-service-stability: true
+# aws.yml 파일          
+      - name: Github Actions - Slack
+        uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }} #job의 성공 여부
+          author_name: WePLAT-Frontend-PRD #알림 메세지의 제목으로 사용될 이름
+          fields: repo,message,commit,author,action,eventName,ref,workflow #알람에 보일 정보
+          mention: jinwoo.ha #멘션할 대상 지정
+          if_mention: failure,cancelled #멘션할 job 상태
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # Slack 웹훅 URL
+        if: always() # Pick up events even if the job fails or is canceled.

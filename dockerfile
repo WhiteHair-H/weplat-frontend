@@ -13,7 +13,7 @@ RUN echo "<VirtualHost *:80>\n\
   ProxyPassReverse / http://weplat-ap2-was-nlb-b2860825aee875fd.elb.ap-northeast-1.amazonaws.com:8080/\n\
 </VirtualHost>" >> /usr/local/apache2/conf/httpd.conf
 
-# 포트 80을 외부로 열어줌
+## 포트 80을 외부로 열어줌
 EXPOSE 80
 
 # Apache 서버 실행
