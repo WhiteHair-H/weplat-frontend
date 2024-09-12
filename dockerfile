@@ -18,4 +18,3 @@ EXPOSE 80
 
 # Apache 서버 실행
 CMD ["httpd-foreground"]
-
